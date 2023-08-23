@@ -23,4 +23,4 @@ io.on("connection", (socket) => {
   })
 });
 
-httpServer.listen(8080);
+httpServer.listen("https://nextjs-socketio-api.vercel.app");
