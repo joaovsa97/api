@@ -1,8 +1,10 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
+import express from "express"
 
+const app = express()
 
-const httpServer = createServer();
+const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors:{
     origin: "https://next-socketio-client.vercel.app"
@@ -23,4 +25,4 @@ io.on("connection", (socket) => {
   })
 });
 
-httpServer.listen("https://nextjs-socketio-api.vercel.app");
+httpServer.listen(8084);
